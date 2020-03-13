@@ -10,7 +10,7 @@ import {
   IconButton,
 } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   homeButton: {
     marginRight: theme.spacing(2),
+    color: '#FFFFFF',
   },
 }));
 
@@ -48,11 +49,11 @@ export const FeedPage = () => {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar variant="dense">
+        <Toolbar>
           <IconButton
             component={Link}
             to={'/'}
-            color="white"
+            color="inherit"
             className={classes.homeButton}
           >
             <HomeIcon />
